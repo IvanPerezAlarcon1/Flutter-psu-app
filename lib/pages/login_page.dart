@@ -27,13 +27,13 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffdae1e8), //color de fondo de la pantalla
-      appBar: AppBar(
+      backgroundColor: Color(0xff3b4f5f), //color de fondo de la pantalla
+      /*appBar: AppBar(
         backgroundColor: Color(0xff00acac), //color de la appbar
         title: Center(
           child: Text("Menú principal"),
         ),
-      ),
+      ), */
       body: SafeArea(
         child: Container(
           alignment: Alignment.center,
@@ -45,11 +45,22 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisSize: MainAxisSize.max,
             verticalDirection: VerticalDirection.down,
             children: <Widget>[
+              Text(
+                "PSU App simulator",
+                style: TextStyle(
+                  fontFamily: "Cookie",
+                  fontSize: 40,
+                  color: Color(0xff00acac),
+                ),
+              ),
+              SizedBox(
+                height: 60,
+              ),
               Center(
                 child: SvgPicture.asset(
-                  'assets/img/revisa_pc.svg',
-                  height: 300,
-                  width: 300,
+                  'assets/img/menu.svg',
+                  height: 250,
+                  width: 250,
                 ),
               ),
               SizedBox(
@@ -57,36 +68,45 @@ class _LoginPageState extends State<LoginPage> {
               ),
               CupertinoButton(
                   borderRadius: BorderRadius.circular(100),
-                  color: Color(0xff3b4f5f),
+                  color: Color(0xff00acac),
                   child: Text(
                     "Carreras",
                     style: TextStyle(
+                      fontFamily: "Oswald",
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20,
                       letterSpacing: 1,
                     ),
                   ),
                   onPressed: () {}),
               SizedBox(
-                height: 20,
+                height: 25,
               ),
               CupertinoButton(
                   borderRadius: BorderRadius.circular(100),
-                  color: Color(0xff3b4f5f),
+                  color: Color(0xff00acac),
                   child: Text(
                     "Simular",
                     style: TextStyle(
+                      fontFamily: "Oswald",
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20,
                       letterSpacing: 1,
                     ),
                   ),
                   onPressed: () {}),
               SizedBox(
-                height: 20,
+                height: 25,
               ),
               CupertinoButton(
                   borderRadius: BorderRadius.circular(100),
-                  color: Color(0xff3b4f5f),
+                  color: Color(0xff00acac),
                   child: Text(
                     "Integrantes",
                     style: TextStyle(
+                      fontFamily: "Oswald",
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20,
                       letterSpacing: 1,
                     ),
                   ),
