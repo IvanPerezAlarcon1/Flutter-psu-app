@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterpsuapp/utils/responsive.dart';
 
 class Integrantes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final Responsive responsive = Responsive.of(context);
     return Scaffold(
       backgroundColor: Color(0xff3b4f5f),
       body: SafeArea(
@@ -21,47 +23,50 @@ class Integrantes extends StatelessWidget {
                 "Integrantes",
                 style: TextStyle(
                   fontFamily: "Cookie",
-                  fontSize: 60,
+                  fontSize: responsive.ip(7),
                   color: Color(0xff00acac),
                   decoration: TextDecoration.underline,
                   decorationStyle: TextDecorationStyle.wavy,
                 ),
               ),
               SizedBox(
-                height: 100,
+                height: responsive.ip(14),
               ),
               Text(
                 "Iván Pérez",
                 style: TextStyle(
                   fontFamily: "Cookie",
-                  fontSize: 40,
-                  color: Color(0xff00acac),
+                  fontSize: responsive.ip(5),
+                  color: Colors.white,
+                  //Color(0xff00acac),
                 ),
               ),
               SizedBox(
-                height: 25,
+                height: responsive.ip(3),
               ),
               Text(
                 "Lester Vásquez",
                 style: TextStyle(
                   fontFamily: "Cookie",
-                  fontSize: 40,
-                  color: Color(0xff00acac),
+                  fontSize: responsive.ip(5),
+                  color: Colors.white,
+                  //Color(0xff00acac),
                 ),
               ),
               SizedBox(
-                height: 25,
+                height: responsive.ip(3),
               ),
               Text(
                 "Sebastián Pérez",
                 style: TextStyle(
                   fontFamily: "Cookie",
-                  fontSize: 40,
-                  color: Color(0xff00acac),
+                  fontSize: responsive.ip(5),
+                  color: Colors.white,
+                  //Color(0xff00acac),
                 ),
               ),
               SizedBox(
-                height: 100,
+                height: responsive.ip(12),
               ),
               RaisedButton(
                 color: Color(0xff00acac),
@@ -72,7 +77,7 @@ class Integrantes extends StatelessWidget {
                 padding: EdgeInsets.all(20),
                 child: Icon(
                   Icons.arrow_back,
-                  size: 40,
+                  size: responsive.ip(8),
                   color: Colors.white,
                 ),
               ),
