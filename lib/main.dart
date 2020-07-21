@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutterpsuapp/pages/menu_principal.dart';
+import 'package:flutterpsuapp/utils/rotacion.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget with PortraitModeMixin {
+  //con esto se bloquea la rotación de la app y queda en vertical
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner:
