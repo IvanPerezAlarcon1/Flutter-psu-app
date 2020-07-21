@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutterpsuapp/pages/integrantes.dart';
-//import 'package:flutter_svg/svg.dart';
+import 'package:flutterpsuapp/utils/responsive.dart';
 
 class MenuPrincipal extends StatefulWidget {
   @override
@@ -11,30 +11,11 @@ class MenuPrincipal extends StatefulWidget {
 }
 
 class _MenuPrincipal extends State<MenuPrincipal> {
-/*
-  @override
-  void afterFirstLayout(BuildContext context) {
-    //este método se ejecuta solo 1 vez, detecta el tipo de dispositivo en el cual se ejecuta la app
-    //para ver las medidas si está horizontal o vertical, shortestSide retorna el valor mínimo del ancho o el alto, independiente del sentido del dispositivo
-    final bool isTablet = MediaQuery.of(context).size.shortestSide >=
-        600; //si esto se cumple es que la app está en una tablet y se permitira que el dispositivo rote, en caso contrario, se bloquea la opción de rotar la app
-    if (!isTablet) {
-      SystemChrome.setPreferredOrientations([
-        DeviceOrientation.portraitUp
-      ]); //SI ME ENCUENTRO EN UN SMARTPHONE SE BLOQUEA LA ROTACIÓN DEL DISPOSITIVO
-    }
-  }
-*/
   @override
   Widget build(BuildContext context) {
+    final Responsive responsive = Responsive.of(context);
     return Scaffold(
-      backgroundColor: Color(0xff3b4f5f), //color de fondo de la pantalla
-      /*appBar: AppBar(
-        backgroundColor: Color(0xff00acac), //color de la appbar
-        title: Center(
-          child: Text("Menú principal"),
-        ),
-      ), */
+      backgroundColor: Color(0xff3b4f5f),
       body: SafeArea(
         child: Container(
           alignment: Alignment.center,
@@ -50,22 +31,21 @@ class _MenuPrincipal extends State<MenuPrincipal> {
                 "PSU App simulator",
                 style: TextStyle(
                   fontFamily: "Cookie",
-                  fontSize: 40,
+                  fontSize: responsive.ip(6),
                   color: Color(0xff00acac),
                 ),
               ),
               SizedBox(
-                height: 60,
+                height: responsive.ip(6.5),
               ),
               Center(
                 child: SvgPicture.asset(
                   'assets/img/menu.svg',
-                  height: 250,
-                  width: 250,
+                  height: responsive.hp(32),
                 ),
               ),
               SizedBox(
-                height: 40,
+                height: responsive.ip(4),
               ),
               CupertinoButton(
                   borderRadius: BorderRadius.circular(100),
@@ -75,13 +55,13 @@ class _MenuPrincipal extends State<MenuPrincipal> {
                     style: TextStyle(
                       fontFamily: "Oswald",
                       fontWeight: FontWeight.w400,
-                      fontSize: 20,
+                      fontSize: responsive.ip(2.5),
                       letterSpacing: 1,
                     ),
                   ),
                   onPressed: () {}),
               SizedBox(
-                height: 25,
+                height: responsive.ip(3.5),
               ),
               CupertinoButton(
                   borderRadius: BorderRadius.circular(100),
@@ -91,13 +71,13 @@ class _MenuPrincipal extends State<MenuPrincipal> {
                     style: TextStyle(
                       fontFamily: "Oswald",
                       fontWeight: FontWeight.w400,
-                      fontSize: 20,
+                      fontSize: responsive.ip(2.5),
                       letterSpacing: 1,
                     ),
                   ),
                   onPressed: () {}),
               SizedBox(
-                height: 25,
+                height: responsive.ip(3.5),
               ),
               CupertinoButton(
                   borderRadius: BorderRadius.circular(100),
@@ -107,7 +87,7 @@ class _MenuPrincipal extends State<MenuPrincipal> {
                     style: TextStyle(
                       fontFamily: "Oswald",
                       fontWeight: FontWeight.w400,
-                      fontSize: 20,
+                      fontSize: responsive.ip(2.5),
                       letterSpacing: 1,
                     ),
                   ),
